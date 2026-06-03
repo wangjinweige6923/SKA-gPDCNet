@@ -1,2 +1,2 @@
 # SKA-gPDCNet
-SKA-gPDCNet: Fundus multi-disease classification with gated pixel-difference convolution and semantic knowledge alignment.
+A Multi-Disease Classification Method for Fundus Images Integrating Gated Central Pixel-Difference Convolution and Semantic Knowledge Alignment
