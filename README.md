@@ -5,6 +5,8 @@ A Multi-Disease Classification Method for Fundus Images Integrating Gated Centra
 
 
 conda create -n classification python=3.10
+
 conda activate classification
+
 pip install -r requirements.txt
 
