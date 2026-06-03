@@ -20,6 +20,16 @@ Results：https://drive.google.com/file/d/1zyGY7HhX3RvJmxSVmr_FH25y3QbBd1s5/view
 
 python -m pip install -r requirements.txt
 
+## Train
+
+python .\run_paper_experiment_backbone.py --data-dir .\dataset --output-root .\runs\resnet34_5seed --seeds 20 40 42 80 100 --train-ratio 0.7 --val-ratio 0.15 --test-ratio 0.15 --epochs 30 --batch-size 8 --img-size 224 224 --device cuda --num-workers 4 --grouping-mode class_base_id --backbone resnet34
+
+python .\run_paper_experiment_backbone.py --data-dir .\dataset --output-root .\result\literature_adapted_comparison\methods\ours_ska_2026 --seeds 110 220 900 1100 1110 --train-ratio 0.7 --val-ratio 0.15 --test-ratio 0.15 --epochs 30 --batch-size 8 --img-size 224 224 --device cuda --num-workers 0 --grouping-mode class_base_id --backbone resnet34_ska_gpdc_c_v15 --model-label Ours --representative-seed 220
+
+
+python .\run_paper_experiment_backbone.py --data-dir .\dataset --output-root .\result\ska_gpdcnet_no_vessel\ska_gpdcnet_fixed5seed --seeds 880 220 20 900 660 --train-ratio 0.7 --val-ratio 0.15 --test-ratio 0.15 --epochs 30 --batch-size 8 --img-size 224 224 --device cuda --num-workers 0 --grouping-mode class_base_id --backbone resnet34_ska_gpdc_c_v15 --model-label SKA-gPDCNet --representative-seed 220
+
+
 ## Evaluation
 
 Examples:
