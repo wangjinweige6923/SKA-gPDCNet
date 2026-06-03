@@ -18,5 +18,15 @@ Models：
 
 Results：https://drive.google.com/file/d/1zyGY7HhX3RvJmxSVmr_FH25y3QbBd1s5/view?usp=drive_link
 
-
 python -m pip install -r requirements.txt
+
+##Evaluation
+
+Examples:
+
+python .\plot_baseline_paper_figures.py --runs-root .\runs --output-dir .\runs\baseline_visualization --seeds 20 40 42 80 100 
+
+python .\run_literature_adapted_comparison.py --data-dir .\dataset --output-root .\result\literature_adapted_comparison --methods ours_ska_2026 --seeds 110 220 900 1100 1110 --train-ratio 0.7 --val-ratio 0.15 --test-ratio 0.15 --epochs 30 --batch-size 8 --img-size 224 224 --device cuda --num-workers 0 --grouping-mode class_base_id --representative-seed 220
+
+python .\run_ska_gpdc_experiment.py --data-dir .\dataset --output-root .\result --experiment-name ska_gpdcnet_no_vessel --seeds 880 220 20 900 660 --train-ratio 0.7 --val-ratio 0.15 --test-ratio 0.15 --epochs 30 --batch-size 8 --img-size 224 224 --device cuda --num-workers 0 --grouping-mode class_base_id --representative-seed 220 --skip-existing
+
